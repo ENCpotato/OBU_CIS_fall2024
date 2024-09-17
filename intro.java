@@ -12,6 +12,7 @@ public class intro extends JFrame implements ActionListener {
     private JLabel wageLabel;     
     private JTextField salField; 
     private JTextField wageField; 
+    private JButton maxButton;
  
     intro() {
        GridBagConstraints layoutConst = null;
@@ -19,6 +20,8 @@ public class intro extends JFrame implements ActionListener {
        setTitle("Battleship");
  
        wageLabel = new JLabel("User Name:");
+       maxButton = new JButton("Start Game");
+       maxButton.addActionListener(this);
  
        wageField = new JTextField(15);
        wageField.setEditable(true);
@@ -43,6 +46,13 @@ public class intro extends JFrame implements ActionListener {
        layoutConst.gridy = 0;
        layoutConst.insets = new Insets(10, 10, 10, 10);
        add(wageField, layoutConst);
+
+        layoutConst = new GridBagConstraints();
+        layoutConst.insets = new Insets(10, 10, 10, 10);
+        layoutConst.fill = GridBagConstraints.HORIZONTAL;
+        layoutConst.gridx = 0;
+        layoutConst.gridy = 2;
+        add(maxButton, layoutConst);
  
     }
  
@@ -52,5 +62,7 @@ public class intro extends JFrame implements ActionListener {
        board.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
        
        new theBoard().setVisible(true);
+       board.setSize(400, 400);
+       
         }
 } 

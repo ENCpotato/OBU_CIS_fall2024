@@ -1,3 +1,4 @@
+import java.awt.Component;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
@@ -7,6 +8,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
+import javax.swing.JFrame;
 
 public class theBoard extends JFrame implements ActionListener{
     private JLabel wageLabel;     
@@ -15,19 +17,26 @@ public class theBoard extends JFrame implements ActionListener{
     private JTextField salField; 
     private JTextField wageField;
     private JButton calcButton;
+
+    
+
     theBoard(){
         GridBagConstraints layoutConst = null;
-
+    
+        
+        
         setTitle("Battleship");
 
         textLabel = new JLabel("Welcome to Battleship!");
+        
+
 
 
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        // TODO Auto-generated method stub
+
         throw new UnsupportedOperationException("Unimplemented method 'actionPerformed'");
     }
 
