@@ -17,22 +17,42 @@ public class theBoard extends JFrame implements ActionListener{
     private JTextField salField; 
     private JTextField wageField;
     private JButton calcButton;
+    
 
     
 
     theBoard(){
         GridBagConstraints layoutConst = null;
-    
+ 
+       setTitle("Battleship");
+ 
+       wageLabel = new JLabel("User Name:");
+ 
+       wageField = new JTextField(15);
+       wageField.setEditable(true);
+       wageField.setText("Ethan");
+       wageField.addActionListener(this);
         
-        
-        setTitle("Battleship");
-
-        textLabel = new JLabel("Welcome to Battleship!");
-        
-
-
-
+       salField = new JTextField(15);
+       salField.setEditable(false);
+ 
+       setLayout(new GridBagLayout());
+       layoutConst = new GridBagConstraints();
+ 
+       layoutConst.gridx = 0;
+       layoutConst.gridy = 0;
+ 
+       layoutConst.insets = new Insets(10, 10, 10, 10);
+ 
+       add(wageLabel, layoutConst);
+ 
+       layoutConst = new GridBagConstraints();
+       layoutConst.gridx = 1;
+       layoutConst.gridy = 0;
+       layoutConst.insets = new Insets(10, 10, 10, 10);
+       add(wageField, layoutConst);
     }
+    
 
     @Override
     public void actionPerformed(ActionEvent e) {
