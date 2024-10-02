@@ -65,4 +65,9 @@ public class intro extends JFrame implements ActionListener {
        board.setSize(400, 400);
        
         }
+
+    public void print() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'print'");
+    }
 } 

@@ -7,11 +7,12 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 
-   public static void main(String[] args) {
-      intro myFrame = new intro();
+public class EmptyFrame {
+   public static void main(String[] args) {      intro myFrame = new intro();
 
       myFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
       myFrame.pack();
       myFrame.setVisible(true);
       
    }
+}
